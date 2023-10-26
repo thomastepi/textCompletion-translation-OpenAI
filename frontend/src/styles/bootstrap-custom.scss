@@ -1,0 +1,13 @@
+// custom values for bootstrap variables
+$theme-colors: (
+  "primary": #7468E9,
+  "secondary": #05E7C7,
+  "success": #6BE34F,
+  "info": #17a2b8,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #f8f9fa,
+  "dark": #343a40
+);
+
+@import "~bootstrap/scss/bootstrap";
