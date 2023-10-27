@@ -53,8 +53,8 @@ function Home() {
           // setResult
           setResult(data.data.choices[0].text);
 
-          //empty input
-          setInputValue({ language: "french", message: "" });
+          //empty input message
+          setInputValue({ ...inputValue, message: "" });
 
           // empty error
           setError("");
@@ -101,8 +101,8 @@ function Home() {
           // setResult
           setResult(data.data.choices[0].text);
 
-          //empty input
-          setInputValue({ language: "french", message: "" });
+          //empty input message
+          setInputValue({ ...inputValue, message: "" });
 
           // empty error
           setError("");
@@ -134,6 +134,11 @@ function Home() {
   return (
     <div className="container">
       <h1>Text Completion / Translate</h1>
+      <h5 style={{ padding: "30px 0 10px 0" }}>
+        Select language to translate or start typing an input and click{" "}
+        <span style={{ fontStyle: "italic", fontWeight: "bold" }}>Process</span> to get an
+        intelligent completion
+      </h5>
 
       <form onSubmit={handleSubmit}>
         <div className="choices">
@@ -173,6 +178,15 @@ function Home() {
             onChange={handleInputChange}
           />
           <label htmlFor="german">German</label>
+
+          <input
+            type="radio"
+            id="arabic"
+            name="language"
+            value="arabic"
+            onChange={handleInputChange}
+          />
+          <label htmlFor="arabic">Arabic</label>
         </div>
         <textarea
           value={inputValue.message}
